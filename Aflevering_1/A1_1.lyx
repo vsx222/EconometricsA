@@ -168,7 +168,8 @@ Note that model does not include an intercept, since the averages of all
 \end_layout
 
 \begin_layout Standard
-Write up model using matrix notation.
+1.
+ Write up model using matrix notation.
  Show that the OLS estimator, 
 \begin_inset Formula $\hat{\beta}_{1}$
 \end_inset
@@ -597,16 +598,362 @@ By writing the model as
  , we find:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection*
   
 \begin_inset Formula 
 \[
-\hat{β}1=\frac{\sum{i=1}^{n}x_{i1}y_{i}-\dfrac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i1}^{2}-\dfrac{\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}}
+\hat{β}_{1}=\frac{\sum{i=1}^{n}x_{i1}y_{i}-\dfrac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i1}^{2}-\dfrac{\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}}
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection*
+2.
+ Now consider two simple regressions:
+\end_layout
+
+\begin_layout Standard
+a.
+ A simple regression of 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ (without an intercept).
+ Define the residuals from this regression as 
+\begin_inset Formula $\hat{r_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b.
+ A simple regression of 
+\begin_inset Formula $y$
+\end_inset
+
+ on 
+\begin_inset Formula $\hat{r}_{1}$
+\end_inset
+
+ (without an intercept).
+ 
+\end_layout
+
+\begin_layout Standard
+Show that the estimated slope parameter from step b) is identical to β1
+ as defined in the previous equation.
+ 
+\end_layout
+
+\begin_layout Standard
+[Hint: Use equation (2.66) in Wooldridge to obtain an expression for the
+ slope parameter in step a).
+ Calculate the residuals based on this expression and use these in step
+ b)]
+\end_layout
+
+\begin_layout Standard
+equation 2.66=
+\begin_inset Formula $\tilde{\beta\frac{\sum_{i=1}^{n}x_{i}y_{i}}{\sum_{i=1}^{n}x_{i}^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To show that the estimated slope parameter from step b) is identical to
+ 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ as defined in the previous equation, we will use the provided hint and
+ apply equation (2.66) from Wooldridge.
+\end_layout
+
+\begin_layout Standard
+Step a) Regress 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ without an intercept:
+\end_layout
+
+\begin_layout Standard
+The regression equation is: 
+\begin_inset Formula 
+\[
+x_{i1}=\tilde{\beta}x_{i2}+r_{i1}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\tilde{\beta}$
+\end_inset
+
+ is the estimated slope coefficient, and 
+\begin_inset Formula $r_{i1}$
+\end_inset
+
+ are the residuals.
+\end_layout
+
+\begin_layout Standard
+Using equation (2.66): 
+\begin_inset Formula 
+\[
+\tilde{\beta}=\frac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The residuals from this regression are: 
+\begin_inset Formula 
+\[
+\hat{r}_{i1}=x_{i1}-\tilde{\beta}x_{i2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Step b) Regress 
+\begin_inset Formula $y$
+\end_inset
+
+ on 
+\begin_inset Formula $\hat{r}_{1}$
+\end_inset
+
+ without an intercept:
+\end_layout
+
+\begin_layout Standard
+The estimated slope parameter is: 
+\begin_inset Formula 
+\[
+\hat{\gamma}=\frac{\sum_{i=1}^{n}\hat{r}_{i1}y_{i}}{\sum_{i=1}^{n}\hat{r}_{i1}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Show that 
+\begin_inset Formula $\hat{\gamma}=\hat{\beta}_{1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+First, compute the numerator 
+\begin_inset Formula $(\ensuremath{N})$
+\end_inset
+
+ and the denominator 
+\begin_inset Formula $(\ensuremath{D})$
+\end_inset
+
+ of 
+\begin_inset Formula $\hat{\gamma}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Compute Numerator 
+\begin_inset Formula $(\ensuremath{N})$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+N=\sum_{i=1}^{n}\hat{r}_{i1}y_{i}=\sum_{i=1}^{n}(x_{i1}-\tilde{\beta}x_{i2})y_{i}=\sum_{i=1}^{n}x_{i1}y_{i}-\tilde{\beta}\sum_{i=1}^{n}x_{i2}y_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Compute Denominator 
+\begin_inset Formula $(\ensuremath{D})$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+D=\sum_{i=1}^{n}\hat{r}_{i1}^{2}=\sum_{i=1}^{n}(x_{i1}-\tilde{\beta}x_{i2})^{2}=\sum_{i=1}^{n}x_{i1}^{2}-2\tilde{\beta}\sum_{i=1}^{n}x_{i1}x_{i2}+\tilde{\beta}^{2}\sum_{i=1}^{n}x_{i2}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\tilde{\beta}=\dfrac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}$
+\end_inset
+
+, we have:
+\begin_inset Formula 
+\[
+\tilde{\beta}^{2}\sum_{i=1}^{n}x_{i2}^{2}=\tilde{\beta}\sum_{i=1}^{n}x_{i1}x_{i2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the denominator simplifies to: 
+\begin_inset Formula 
+\[
+D=\sum_{i=1}^{n}x_{i1}^{2}-\tilde{\beta}\sum_{i=1}^{n}x_{i1}x_{i2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substitute 
+\begin_inset Formula $\ensuremath{\tilde{\beta}}$
+\end_inset
+
+ into 
+\begin_inset Formula $N$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+Compute 
+\begin_inset Formula $\tilde{\beta}\sum_{i=1}^{n}x_{i2}y_{i}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\tilde{\beta}\sum_{i=1}^{n}x_{i2}y_{i}=\left(\frac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\right)\sum_{i=1}^{n}x_{i2}y_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, compute 
+\begin_inset Formula $\tilde{\beta}\sum_{i=1}^{n}x_{i1}x_{i2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\tilde{\beta}\sum_{i=1}^{n}x_{i1}x_{i2}=\frac{\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $N$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ become: 
+\begin_inset Formula 
+\[
+N=\sum_{i=1}^{n}x_{i1}y_{i}-\frac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+D=\sum_{i=1}^{n}x_{i1}^{2}-\frac{\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, the estimated slope parameter is:
+\begin_inset Formula 
+\[
+\hat{\gamma}=\frac{N}{D}=\frac{\sum_{i=1}^{n}x_{i1}y_{i}-\dfrac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i1}^{2}-\dfrac{\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This expression matches the given formula for 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\hat{\beta}_{1}=\frac{\sum_{i=1}^{n}x_{i1}y_{i}-\dfrac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i1}^{2}-\dfrac{\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+3.
+ Now consider two simple regressions:
+\end_layout
+
+\begin_layout Standard
+a.
+ A simple regression
 \end_layout
 
 \end_body
