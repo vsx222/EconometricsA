@@ -1,0 +1,613 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mandatory Assignment 1
+\end_layout
+
+\begin_layout Author
+\noindent
+Tax revenues and Municipal Tax Rates in Denmark
+\end_layout
+
+\begin_layout Author
+Max Marius Toft (vsx222) & Sofus Holm (gsk440)
+\end_layout
+
+\begin_layout Subsection*
+Problem 1.
+ Descriptive analysis
+\end_layout
+
+\begin_layout Paragraph*
+Present a descriptive analysis of the variables in the file KOMMUNE.dta
+\end_layout
+
+\begin_layout Itemize
+Tax Revenue (taxrev): The distribution of tax revenues among the municipalities
+ is highly skewed, with most municipalities generating revenues below 10,000,
+ and a few outliers generating significantly higher tax revenues, especially
+ Københavns Kommune.
+ 
+\end_layout
+
+\begin_layout Itemize
+Tax Rate (taxrate): The tax rate has a relatively narrow range, centered
+ around 25%, with few municipalities below or above this central value.
+ Most municipalities fall between 24.8% and 25.7%.
+ 
+\end_layout
+
+\begin_layout Itemize
+Population (pop): The population distribution is heavily skewed to the right,
+ with the majority of municipalities having populations below 100,000, while
+ Københavns Kommune has a significantly larger population, acting as an
+ outlier.
+\end_layout
+
+\begin_layout Subsection*
+Problem 3.
+ Multiple linear regression as two simple linear regressions
+\end_layout
+
+\begin_layout Paragraph*
+Assume that the true statistical model is defined as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=β_{1}x_{1}+β_{2}x_{2}+u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $u$
+\end_inset
+
+ is an error term.
+\end_layout
+
+\begin_layout Standard
+Note that model does not include an intercept, since the averages of all
+ variables (
+\begin_inset Formula $\bar{y},\bar{x}_{1},\bar{x_{2}}$
+\end_inset
+
+) are assumed to be zero.
+ This is a simplifying assumption to reduce the algebra involved in the
+ following questions.
+ The basic results are, however, unchanged if an intercept had been included
+ in the statistical model.
+ 
+\end_layout
+
+\begin_layout Standard
+Write up model using matrix notation.
+ Show that the OLS estimator, 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ can be written as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta_{1}=\frac{\sum_{i=1}^{n}x_{i1}y_{i}-\frac{\sum_{i=1}^{n}x_{i}1x_{i}2}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i1}^{2}-\frac{(\sum_{i=1}^{n}x_{i1}x_{i2})^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hint use 
+\begin_inset Formula $\hat{\beta}=\left(\begin{array}{c}
+\hat{\beta_{1}}\\
+\hat{\beta_{2}}
+\end{array}\right)=(X'X)^{-1}X'y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We'll start by writing the model in matrix form as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{align*}y & =X\beta+u\end{align*}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where:
+\end_layout
+
+\begin_layout Standard
+• 
+\begin_inset Formula $y$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ vector of the dependent variable.
+ 
+\end_layout
+
+\begin_layout Standard
+• 
+\begin_inset Formula $X$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times2$
+\end_inset
+
+ matrix of independent variables.
+ 
+\end_layout
+
+\begin_layout Standard
+• 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a 
+\begin_inset Formula $2\times1$
+\end_inset
+
+vector of coefficients.
+ 
+\end_layout
+
+\begin_layout Standard
+• 
+\begin_inset Formula $u$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ vector of error terms.
+\end_layout
+
+\begin_layout Standard
+Specifically:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=\begin{bmatrix}y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}
+\end{bmatrix},\quad X=\begin{bmatrix}x_{11} & x_{12}\\
+x_{21} & x_{22}\\
+\vdots & \vdots\\
+x_{n1} & x_{n2}
+\end{bmatrix},\quad\beta=\begin{bmatrix}\beta_{1}\\
+\beta_{2}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The OLS estimator is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}=(X{\prime}X)^{-1}X{\prime}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+First, compute 
+\begin_inset Formula $X{\prime}XandX{\prime}y:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+•
+\begin_inset Formula $X{\prime}X$
+\end_inset
+
+ is a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X{\prime}X=\begin{bmatrix}\sum_{i=1}^{n}x_{i1}^{2} & \sum_{i=1}^{n}x_{i1}x_{i2}\\
+\sum_{i=1}^{n}x_{i1}x_{i2} & \sum_{i=1}^{n}x_{i2}^{2}
+\end{bmatrix}=\begin{bmatrix}S_{11} & S_{12}\\
+S_{12} & S_{22}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+•
+\begin_inset Formula $X{\prime}y$
+\end_inset
+
+ is a 
+\begin_inset Formula $2\times1\quad$
+\end_inset
+
+ vector:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X{\prime}y=\begin{bmatrix}\sum_{i=1}^{n}x_{i1}y_{i}\\
+\sum_{i=1}^{n}x_{i2}y_{i}
+\end{bmatrix}=\begin{bmatrix}S_{1y}\\
+S_{2y}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Compute the inverse of 
+\begin_inset Formula $X{\prime}X$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+The determinant of 
+\begin_inset Formula $X{\prime}X$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D=\det(X{\prime}X)=S_{11}S_{22}-(S_{12})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The inverse of 
+\begin_inset Formula $X{\prime}X$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(X{\prime}X)^{-1}=\frac{1}{D}\begin{bmatrix}S_{22} & -S_{12}\\
+-S_{12} & S_{11}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Compute 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}=(X{\prime}X)^{-1}X{\prime}y=\frac{1}{D}\begin{bmatrix}S_{22} & -S_{12}\\
+-S_{12} & S_{11}
+\end{bmatrix}\begin{bmatrix}S_{1y}\\
+S_{2y}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Focus on 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}1=\frac{1}{D}(S{22}S_{1y}-S_{12}S_{2y})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ Simplifying the Expression
+\end_layout
+
+\begin_layout Standard
+Express 
+\begin_inset Formula $D$
+\end_inset
+
+ and the numerator in terms compatible with the given formula:
+\end_layout
+
+\begin_layout Standard
+• Rewrite 
+\begin_inset Formula $D$
+\end_inset
+
+ as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D=S_{11}S_{22}-(S_{12})^{2}=S_{22}\left(S_{11}-\frac{(S_{12})^{2}}{S_{22}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+• Simplify the numerator:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{22}S_{1y}-S_{12}S_{2y}=S_{22}\left(S_{1y}-\frac{S_{12}}{S_{22}}S_{2y}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substitute back into 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}1=\frac{S{22}\left(S_{1y}-\frac{S_{12}}{S_{22}}S_{2y}\right)}{S_{22}\left(S_{11}-\frac{(S_{12})^{2}}{S_{22}}\right)}=\frac{S_{1y}-\frac{S_{12}}{S_{22}}S_{2y}}{S_{11}-\frac{(S_{12})^{2}}{S_{22}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Replace 
+\begin_inset Formula $S_{11},S_{12},S_{22},S_{1y}$
+\end_inset
+
+ , and 
+\begin_inset Formula $S_{2y}$
+\end_inset
+
+ with their summation equivalents:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}1=\frac{\sum{i=1}^{n}x_{i1}y_{i}-\frac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i1}^{2}-\frac{\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Final Answer:
+\end_layout
+
+\begin_layout Standard
+Therefore, the OLS estimator 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ can be written as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}1=\frac{\sum{i=1}^{n}x_{i1}y_{i}-\dfrac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i1}^{2}-\dfrac{\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This matches the expression provided, confirming the derivation.
+\end_layout
+
+\begin_layout Standard
+By writing the model as 
+\begin_inset Formula $y=Xβ+u$
+\end_inset
+
+ and computing 
+\begin_inset Formula $\hat{β}=(X{\prime}X)⁻¹X{\prime}y$
+\end_inset
+
+ , we find:
+\end_layout
+
+\begin_layout Standard
+  
+\begin_inset Formula 
+\[
+\hat{β}1=\frac{\sum{i=1}^{n}x_{i1}y_{i}-\dfrac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i1}^{2}-\dfrac{\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
