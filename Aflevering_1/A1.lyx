@@ -357,31 +357,14 @@ However,
  to be positive because the tax rate variations across municipalities are likely moderate.
 \end_layout
 
-\begin_layout Standard
-In summary,
+\begin_layout Subsubsection*
+3.
+ Estimate regression model (1) using Ordinary Least Squares (OLS).
  
-\begin_inset Formula $\delta_{1}$
-\end_inset
-
- is expected to be positive under the assumption that increasing the tax rate directly increases total municipal revenues.
- However,
- the actual value of 
-\begin_inset Formula $\delta_{1}$
-\end_inset
-
- will depend on the empirical data and could reflect complexities in how tax rates influence revenue at the municipal level.
 \end_layout
 
 \begin_layout Standard
-3.
- Estimate regression model (1) using Ordinary Least Squares (OLS).
- Report the OLS parameter estimates in a table with their standard errors.
- Comment on the results.
- Does the estimate 
-\begin_inset Formula $\delta\beta1$
-\end_inset
-
- match your prediction from Problem 2.2?
+Laver OLS:
 \end_layout
 
 \begin_layout Subsubsection*
