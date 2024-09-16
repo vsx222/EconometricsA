@@ -382,6 +382,36 @@ Laver OLS:
 \begin_layout Subsection*
 Problem 3:
  Multiple linear regression as two simple linear regressions
+We'll start by writing the model in matrix form as:
+
+\begin{align*}y & =X\beta+u\\
+\\
+\end{align*}
+
+
+Where:
+
+• y is an n\times1 vector of the dependent variable. 
+
+• X is an n\times2 matrix of independent variables. 
+
+• \beta is a 2\times1vector of coefficients. 
+
+• u is an n\times1 vector of error terms.
+
+Specifically:
+
+y=\begin{bmatrix}y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}
+\end{bmatrix},\quad X=\begin{bmatrix}x_{11} & x_{12}\\
+x_{21} & x_{22}\\
+\vdots & \vdots\\
+x_{n1} & x_{n2}
+\end{bmatrix},\quad\beta=\begin{bmatrix}\beta_{1}\\
+\beta_{2}
+\end{bmatrix}
 \end_layout
 
 \begin_layout Subsection*
