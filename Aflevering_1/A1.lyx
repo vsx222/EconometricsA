@@ -325,9 +325,54 @@ In model 1,
 \end_inset
 
 ?
+\end_layout
+
+\begin_layout Standard
+In general,
+ we would expect a positive sign for 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+,
+ as municipalities increase their income tax rate,
+ they are likely to collect more tax revenue,
+ at least in the short term.
+ This is because the tax rate is directly applied to the income base of the residents,
+ and higher rates would typically yield higher revenues.
 \begin_inset Newline newline
 \end_inset
 
+However,
+ if the tax-rate keep rising,
+ we do not expect the same relation.
+ For instance,
+ higher tax rates could make people move from the municipality,
+ or work less,
+ which result in lowered tax revenues.
+ But for the purpose of this analysis,
+ we might still expect 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ to be positive because the tax rate variations across municipalities are likely moderate.
+\end_layout
+
+\begin_layout Standard
+In summary,
+ 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ is expected to be positive under the assumption that increasing the tax rate directly increases total municipal revenues.
+ However,
+ the actual value of 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ will depend on the empirical data and could reflect complexities in how tax rates influence revenue at the municipal level.
+\end_layout
+
+\begin_layout Standard
 3.
  Estimate regression model (1) using Ordinary Least Squares (OLS).
  Report the OLS parameter estimates in a table with their standard errors.
@@ -337,9 +382,9 @@ In model 1,
 \end_inset
 
  match your prediction from Problem 2.2?
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_layout Subsubsection*
 4.
 \begin_inset Newline newline
 \end_inset
