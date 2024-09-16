@@ -277,5 +277,77 @@ end{tabular}
 
 \end_layout
 
+\begin_layout Subsection*
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Problem 2.
+ Empirical analysis of tax revenues and municipal tax rates
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+1.
+ What is the interpretation of 
+\begin_inset Formula $\delta1$
+\end_inset
+
+ in regression model 1?
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series medium
+In model 1,
+ 
+\series default
+a2.
+ What is the expected sign of 
+\begin_inset Formula $\delta1$
+\end_inset
+
+?
+\begin_inset Newline newline
+\end_inset
+
+3.
+ Estimate regression model (1) using Ordinary Least Squares (OLS).
+ Report the OLS parameter estimates in a table with their standard errors.
+ Comment on the results.
+ Does the estimate 
+\begin_inset Formula $\delta\beta1$
+\end_inset
+
+ match your prediction from Problem 2.2?
+\begin_inset Newline newline
+\end_inset
+
+4.
+\begin_inset Newline newline
+\end_inset
+
+5.
+\begin_inset Newline newline
+\end_inset
+
+6.
+\end_layout
+
+\begin_layout Subsection*
+Problem 3:
+ Multiple linear regression as two simple linear regressions
+\end_layout
+
+\begin_layout Subsection*
+Problem 4:
+ Conclusion
+\end_layout
+
 \end_body
 \end_document
