@@ -295,19 +295,31 @@ Problem 2.
 \series bold
 1.
  What is the interpretation of 
-\begin_inset Formula $\delta1$
+\begin_inset Formula $\delta_{1}$
 \end_inset
 
  in regression model 1?
 \end_layout
 
-\begin_layout Subsubsection*
-
-\series medium
+\begin_layout Standard
 In model 1,
  
-\series default
-a2.
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ is first of all the slope of the linear model,
+ but it also represents the elasticity of total tax revenues with respect to the municipal tax rate.
+ Since we are using a log-linear model,
+ 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ can be interpreted as the percentage change in tax revenue when there is a 1% change in the tax rate in the municipality.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+2.
  What is the expected sign of 
 \begin_inset Formula $\delta1$
 \end_inset
