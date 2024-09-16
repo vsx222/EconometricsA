@@ -1,0 +1,281 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{booktabs}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mandatory Assignment 1
+\end_layout
+
+\begin_layout Author
+\noindent
+Tax revenues and Municipal Tax Rates in Denmark
+\end_layout
+
+\begin_layout Author
+Max Marius Toft (vsx222) & Sofus Holm (gsk440)
+\end_layout
+
+\begin_layout Subsection*
+Problem 1.
+ Descriptive analysis
+\end_layout
+
+\begin_layout Paragraph*
+Present a descriptive analysis of the variables in the file KOMMUNE.dta
+\end_layout
+
+\begin_layout Itemize
+Tax Revenue (taxrev):
+ The distribution of tax revenues among the municipalities is highly skewed,
+ with most municipalities generating revenues below 10,000,
+ and a few outliers generating significantly higher tax revenues,
+ especially Københavns Kommune.
+ 
+\end_layout
+
+\begin_layout Itemize
+Tax Rate (taxrate):
+ The tax rate has a relatively narrow range,
+ centered around 25%,
+ with few municipalities below or above this central value.
+ Most municipalities fall between 24.8% and 25.7%.
+ 
+\end_layout
+
+\begin_layout Itemize
+Population (pop):
+ The population distribution is heavily skewed to the right,
+ with the majority of municipalities having populations below 100,000,
+ while Københavns Kommune has a significantly larger population,
+ acting as an outlier.
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lrrrr}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+ & nr & taxrev & taxrate & pop 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+count & 98.000000 & 98.000000 & 98.000000 & 98.000000 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+mean & 462.173469 & 4477.341309 & 25.208162 & 56475.887755 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+std & 236.555437 & 5251.175293 & 0.908003 & 62925.301713 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+min & 101.000000 & 211.228409 & 22.799999 & 1969.000000 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+25% & 242.500000 & 2466.702271 & 24.799999 & 29997.750000 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+50% & 435.000000 & 3317.848633 & 25.299999 & 43475.000000 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+75% & 697.250000 & 4786.060913 & 25.700001 & 59733.000000 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+max & 860.000000 & 44170.335938 & 27.799999 & 528208.000000 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
