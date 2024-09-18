@@ -1231,6 +1231,17 @@ F-statistic:
 
 , reinforcing that the model does not significantly explain the variation
  in the dependent variable.
+Discuss why it is possible to obtain an estimate identical to \beta_{1} in the second step when log(pop_{m}) is an omitted variable.
+
+In the two-step procedure, we first regress \text{taxrate} on \log(\text{popm}) , and the residuals \text{res1} represent the variation in \text{taxrate} that is uncorrelated with \log(\text{popm}) . Essentially, \text{res1} is the “purified” variation in \text{taxrate} , free from any influence of \log(\text{popm}) .
+
+When we regress \log(\text{taxrev}) on \text{res1} , the regression no longer suffers from omitted variable bias because \text{res1} is orthogonal (uncorrelated) to \log(\text{popm}) . 
+
+The residuals \text{res1} contain no information about \log(\text{popm}) , meaning any variation in \log(\text{taxrev}) explained by \text{res1} is independent of the variation in \log(\text{popm}) .
+
+Thus, the second step doesn’t suffer from omitted variable bias, and this explains why the estimate from this regression can be identical to \beta_{1} . The first step “separates out” the influence of \log(\text{popm}) on \text{taxrate} , and the second step works with the residual variation in \text{taxrate} , which is uncorrelated with the omitted variable.
+
+When you omit \log(\text{popm}) in the second step, you’re effectively isolating the variation in \text{taxrate} that is independent of \log(\text{popm}) (which is captured by \text{res1} ). This is similar to what happens in a multiple regression where you would control for \log(\text{popm}) 
 \end_layout
 
 \end_body
