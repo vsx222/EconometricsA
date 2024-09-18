@@ -1,0 +1,274 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Problem 2.
+ Empirical analysis of tax revenues and municipal tax rate
+\end_layout
+
+\begin_layout Subsubsection*
+2.4 
+\series bold
+What is the interpretation of 
+\begin_inset Formula $β_{1}$
+\end_inset
+
+ in regression model (2)? In what way is the interpre- tation of 
+\begin_inset Formula $β_{1}$
+\end_inset
+
+ different than the interpretation of 
+\begin_inset Formula $δ_{1}$
+\end_inset
+
+ in model (1)?
+\end_layout
+
+\begin_layout Standard
+The interpretation of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ differs from 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ because by including additional parameters and variables, we obtain a more
+ precise understanding of what we are examining.
+\end_layout
+
+\begin_layout Standard
+In problem 2.1, we were only interested in observing the tax revenue for
+ a given municipality as a function of the tax rate in that municipality.
+ However, in 2.4, we are now looking at the tax revenue for a given municipality
+ as a function of both the tax rate and the population in the same municipality.
+\end_layout
+
+\begin_layout Standard
+Therefore, it makes intuitive sense that the parameter for the tax rate
+ in 2.1 differs from that in 2.4, as tax revenue depends on two variables
+ in 2.4, compared to just one in 2.1.
+\end_layout
+
+\begin_layout Subsubsection*
+2.5 
+\series bold
+Estimate regression model (2) by OLS.
+ Report the OLS parameter estimates in a table with their standard errors.
+ Comment on the results.
+ Does the estimate 
+\begin_inset Formula $β_{1}$
+\end_inset
+
+ match your prediction from Problem 2.2?
+\end_layout
+
+\begin_layout Itemize
+•Tax rate:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+From the table (
+\color red
+Husk at indsætte tabellen
+\color inherit
+), we observe that the coefficient for the tax rate in this regression is
+ 0.0226.
+ A one-unit increase in the tax rate is thus associated with a 2.26% increase
+ in tax revenue.
+ This result aligns more closely with our expected 
+\backslash
+beta, as predicted in problem 2.2.
+ Additionally, the p-value is around 0.72, indicating that our coefficient
+ is near the 10% significance level.
+ This suggests a positive but weak relationship, as it does not reach the
+ 5% significance level.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Log population (logpop):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We also observe that the coefficient for log(population) is 0.9711, meaning
+ that a 1% increase in population correlates with an increase in tax revenue
+ of approximately 0.97%.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+2.6 
+\series bold
+The difference between the estimates 
+\begin_inset Formula $δ_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $β_{1}$
+\end_inset
+
+ arises from omitting log local population size, 
+\begin_inset Formula $log(pop_{m})$
+\end_inset
+
+, in regression model (1).
+ Explain what omitted variable bias is and describe how the covariance between
+ taxratem and 
+\begin_inset Formula $log(pop_{m})$
+\end_inset
+
+ influences the sign and size of the bias in the OLS estimate 
+\begin_inset Formula $δ_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Omitted Variable Bias (OVB) occurs when a regression model fails to include
+ all relevant variables that influence either the dependent or independent
+ variables, leading to biased and inconsistent coefficient estimates.
+ The bias is calculated as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Bias(\hat{\beta_{1}})=\beta_{2}\cdot Cov(x_{1},x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $Cov(x_{1},x_{2})$
+\end_inset
+
+ equals zero, there will be no bias in the estimation.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $Cov(taxrate_{m},log(pop_{m}))>0$
+\end_inset
+
+ , meaning that the tax rate and 
+\begin_inset Formula $log(population)$
+\end_inset
+
+ are positively correlated, the bias will reflect the potential effect of
+ the omitted variable.
+ Therefore, if 
+\begin_inset Formula $log(pop)$
+\end_inset
+
+ impacts the dependent variable, omitting it will increase the bias, as
+ seen with 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Conversely, if 
+\begin_inset Formula $Cov(taxrate_{m},log(pop_{m}))<0$
+\end_inset
+
+ , the bias will move in the opposite direction.
+\end_layout
+
+\begin_layout Standard
+The magnitude of the bias depends on the strength of the correlation between
+ tax rate and 
+\begin_inset Formula $log(population)$
+\end_inset
+
+.
+ A strong correlation results in a larger bias, while a weak correlation
+ leads to a smaller bias.
+\end_layout
+
+\end_body
+\end_document
