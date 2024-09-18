@@ -1,0 +1,3030 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{booktabs}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mandatory Assignment 1
+\end_layout
+
+\begin_layout Author
+\noindent
+Tax revenues and Municipal Tax Rates in Denmark
+\end_layout
+
+\begin_layout Author
+Max Marius Toft (vsx222) & Sofus Holm (gsk440)
+\end_layout
+
+\begin_layout Subsection*
+Problem 1.
+ Descriptive analysis
+\end_layout
+
+\begin_layout Paragraph*
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphs.png
+	scale 42
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Tax Revenue (taxrev):
+ The distribution of tax revenues among the municipalities is highly skewed,
+ with most municipalities generating revenues below 10,000,
+ and a few outliers generating significantly higher tax revenues,
+ especially Københavns Kommune.
+ 
+\end_layout
+
+\begin_layout Itemize
+Tax Rate (taxrate):
+ The tax rate has a relatively narrow range,
+ centered around 25%,
+ with few municipalities below or above this central value.
+ Most municipalities fall between 24.8% and 25.7%.
+ 
+\end_layout
+
+\begin_layout Itemize
+Population (pop):
+ The population distribution is heavily skewed to the right,
+ with the majority of municipalities having populations below 100,000,
+ while Københavns Kommune has a significantly larger population,
+ acting as an outlier.
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+
+\color white
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{black}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lrrrrrrrr}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+ & count & mean & std & min & 25
+\backslash
+% & 50
+\backslash
+% & 75
+\backslash
+% & max 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+nr & 98.00 & 462.17 & 236.56 & 101.00 & 242.50 & 435.00 & 697.25 & 860.00 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+taxrev & 98.00 & 4477.34 & 5251.18 & 211.23 & 2466.70 & 3317.85 & 4786.06 & 44170.34 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+taxrate & 98.00 & 25.21 & 0.91 & 22.80 & 24.80 & 25.30 & 25.70 & 27.80 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pop & 98.00 & 56475.89 & 62925.30 & 1969.00 & 29997.75 & 43475.00 & 59733.00 & 528208.00 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+const & 98.00 & 1.00 & 0.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$log_{taxrev}$ & 98.00 & 8.10 & 0.77 & 5.35 & 7.81 & 8.11 & 8.47 & 10.70 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$log_{pop}$ & 98.00 & 10.64 & 0.79 & 7.59 & 10.31 & 10.68 & 11.00 & 13.18 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+res1 & 98.00 & 0.00 & 0.89 & -2.29 & -0.37 & 0.11 & 0.49 & 2.33 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+a
+\end_layout
+
+\begin_layout Subsection*
+Problem 2.
+ Empirical analysis of tax revenues and municipal tax rates
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+1.
+ What is the interpretation of 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ in regression model 1?
+\end_layout
+
+\begin_layout Standard
+In model 1,
+ 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ is first of all the slope of the linear model,
+ but it also represents the elasticity of total tax revenues with respect to the municipal tax rate.
+ Since we are using a log-linear model,
+ 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ can be interpreted as the percentage change in tax revenue when there is a 1% change in the tax rate in the municipality.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+2.
+ What is the expected sign of 
+\begin_inset Formula $\delta1$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+In general,
+ we would expect a positive sign for 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+,
+ as municipalities increase their income tax rate,
+ they are likely to collect more tax revenue,
+ at least in the short term.
+ This is because the tax rate is directly applied to the income base of the residents,
+ and higher rates would typically yield higher revenues.
+\begin_inset Newline newline
+\end_inset
+
+However,
+ if the tax-rate keep rising,
+ we do not expect the same relation.
+ For instance,
+ higher tax rates could make people move from the municipality,
+ or work less,
+ which result in lowered tax revenues.
+ But for purpose of the analysis,
+ we expect 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+ to be positive.
+\end_layout
+
+\begin_layout Subsubsection*
+3.
+ Estimate regression model (1) using OLS
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lclc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Dep.
+ Variable:}    &   log
+\backslash
+_taxrev    & 
+\backslash
+textbf{  R-squared:
+         } &     0.029   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Model:}            &       OLS        & 
+\backslash
+textbf{  Adj.
+ R-squared:
+    } &     0.018   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Method:}           &  Least Squares   & 
+\backslash
+textbf{  F-statistic:
+       } &     2.818   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Date:}             & Mon,
+ 16 Sep 2024 & 
+\backslash
+textbf{  Prob (F-statistic):} &   0.0965    
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Time:}             &     19:44:56     & 
+\backslash
+textbf{  Log-Likelihood:
+    } &   -111.12   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{No.
+ Observations:} &          98      & 
+\backslash
+textbf{  AIC:
+               } &     226.2   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Df Residuals:}     &          96      & 
+\backslash
+textbf{  BIC:
+               } &     231.4   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Df Model:}         &           1      & 
+\backslash
+textbf{                     } &             
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Covariance Type:}  &    nonrobust     & 
+\backslash
+textbf{                     } &             
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lcccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+                 & 
+\backslash
+textbf{coef} & 
+\backslash
+textbf{std err} & 
+\backslash
+textbf{t} & 
+\backslash
+textbf{P$> |$t$|$} & 
+\backslash
+textbf{[0.025} & 
+\backslash
+textbf{0.975]}  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{const}   &      11.6982  &        2.143     &     5.459  &         0.000        &        7.444    &       15.952     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{taxrate} &      -0.1426  &        0.085     &    -1.679  &         0.096        &       -0.311    &        0.026     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lclc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Omnibus:}       & 17.794 & 
+\backslash
+textbf{  Durbin-Watson:
+     } &    1.863  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Prob(Omnibus):} &  0.000 & 
+\backslash
+textbf{  Jarque-Bera (JB):
+  } &   45.446  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Skew:}          & -0.567 & 
+\backslash
+textbf{  Prob(JB):
+          } & 1.35e-10  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Kurtosis:}      &  6.138 & 
+\backslash
+textbf{  Cond.
+ No.
+          } &     705.
+  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{OLS Regression Results}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+Here we get 
+\begin_inset Formula $\hat{\delta_{1}}=-0.1426$
+\end_inset
+
+,
+ which is not what we expected,
+ as it shows a negative correlation between tax rates and tax revenue.
+ This could likely be due to the fact that the population,
+ a major factor in looking at tax revenue,
+ is not included.
+ As we can see above,
+ the 95% confidence interval includes zero,
+ meaning that the coefficient is not statistically significant,
+ and with an 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+of 0.03,
+ we can only explain 3% of the variance from the model (which is not very much).
+ Hereby it suggest we cannot use this use this regression to explain tax revenue.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+4.
+ What is the interpretation of 
+\begin_inset Formula $\boldsymbol{\beta_{1}}$
+\end_inset
+
+ in regression model (2)?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $β_{1}$
+\end_inset
+
+ represents the same as 
+\begin_inset Formula $δ_{1}$
+\end_inset
+
+ as before,
+ as the elasticity of tax revenue with respect to the tax rate.
+ However,
+ in this regression,
+ population is now included in the model.
+ 
+\begin_inset Formula $β_{1}$
+\end_inset
+
+ measures the percentage change in tax revenue for a one-unit increase in the tax rate,
+ while holding population constant.
+\begin_inset Newline newline
+\end_inset
+
+If 
+\begin_inset Formula $β_{1}>0$
+\end_inset
+
+,
+ this portrays a positive correlation between tax rate and tax revenue.
+ On the other hand,
+ if 
+\begin_inset Formula $β_{1}<0$
+\end_inset
+
+,
+ it shows a negative correlation,
+ meaning higher tax rates reduce revenue.
+ In general we expect that the inclusion of population will improve the estimate since population size significantly affects tax revenue.
+\end_layout
+
+\begin_layout Subsubsection*
+5.
+ Estimate regression model (2) by OLS
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lclc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Dep.
+ Variable:}    &      taxrev      & 
+\backslash
+textbf{  R-squared:
+         } &     0.980   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Model:}            &       OLS        & 
+\backslash
+textbf{  Adj.
+ R-squared:
+    } &     0.980   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Method:}           &  Least Squares   & 
+\backslash
+textbf{  F-statistic:
+       } &     2344.
+   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Date:}             & Wed,
+ 18 Sep 2024 & 
+\backslash
+textbf{  Prob (F-statistic):} &  1.42e-81   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Time:}             &     11:52:45     & 
+\backslash
+textbf{  Log-Likelihood:
+    } &    79.497   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{No.
+ Observations:} &          98      & 
+\backslash
+textbf{  AIC:
+               } &    -153.0   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Df Residuals:}     &          95      & 
+\backslash
+textbf{  BIC:
+               } &    -145.2   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Df Model:}         &           2      & 
+\backslash
+textbf{                     } &             
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Covariance Type:}  &    nonrobust     & 
+\backslash
+textbf{                     } &             
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lcccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+                 & 
+\backslash
+textbf{coef} & 
+\backslash
+textbf{std err} & 
+\backslash
+textbf{t} & 
+\backslash
+textbf{P$> |$t$|$} & 
+\backslash
+textbf{[0.025} & 
+\backslash
+textbf{0.975]}  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{taxrate} &       0.0226  &        0.012     &     1.816  &         0.072        &       -0.002    &        0.047     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{const}   &      -2.8022  &        0.376     &    -7.461  &         0.000        &       -3.548    &       -2.057     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{logpop}  &       0.9711  &        0.014     &    67.471  &         0.000        &        0.943    &        1.000     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lclc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Omnibus:}       & 15.730 & 
+\backslash
+textbf{  Durbin-Watson:
+     } &    2.007  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Prob(Omnibus):} &  0.000 & 
+\backslash
+textbf{  Jarque-Bera (JB):
+  } &   20.068  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Skew:}          &  0.810 & 
+\backslash
+textbf{  Prob(JB):
+          } & 4.39e-05  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Kurtosis:}      &  4.514 & 
+\backslash
+textbf{  Cond.
+ No.
+          } &     933.
+  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{OLS Regression Results}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Tax rate:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+From the table,
+ we observe that the coefficient for the tax rate in this regression is 0.0226.
+ A one-unit increase in the tax rate is thus associated with a 2.26% increase in tax revenue.
+ This result aligns more closely with our expected 
+\backslash
+beta,
+ as predicted in problem 2.2.
+ Additionally,
+ the p-value is around 0.72,
+ indicating that our coefficient is near the 10% significance level.
+ This suggests a positive but weak relationship,
+ as it does not reach the 5% significance level.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Log population (logpop):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We also observe that the coefficient for log(population) is 0.9711,
+ meaning that a 1% increase in population correlates with an increase in tax revenue of approximately 0.97%.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+6.
+ Explain what omitted variable bias is and describe how the covariance between taxratem and log(popm ) influences the sign and size of the bias in the OLS estimate 
+\begin_inset Formula $\boldsymbol{\delta\beta_{1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Omitted Variable Bias (OVB) occurs when a regression model fails to include all relevant variables that influence either the dependent or independent variables,
+ leading to biased and inconsistent coefficient estimates.
+ The bias is calculated as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Bias(\hat{\beta_{1}})=\beta_{2}\cdot Cov(x_{1},x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $Cov(x_{1},x_{2})$
+\end_inset
+
+ equals zero,
+ there will be no bias in the estimation.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $Cov(taxrate_{m},log(pop_{m}))>0$
+\end_inset
+
+ ,
+ meaning that the tax rate and 
+\begin_inset Formula $log(population)$
+\end_inset
+
+ are positively correlated,
+ the bias will reflect the potential effect of the omitted variable.
+ Therefore,
+ if 
+\begin_inset Formula $log(pop)$
+\end_inset
+
+ impacts the dependent variable,
+ omitting it will increase the bias,
+ as seen with 
+\begin_inset Formula $\delta_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Conversely,
+ if 
+\begin_inset Formula $Cov(taxrate_{m},log(pop_{m}))<0$
+\end_inset
+
+ ,
+ the bias will move in the opposite direction.
+\end_layout
+
+\begin_layout Standard
+The magnitude of the bias depends on the strength of the correlation between tax rate and 
+\begin_inset Formula $log(population)$
+\end_inset
+
+.
+ A strong correlation results in a larger bias,
+ while a weak correlation leads to a smaller bias.
+\end_layout
+
+\begin_layout Subsection*
+Problem 3:
+ Multiple linear regression as two simple linear regressions
+\end_layout
+
+\begin_layout Subsubsection*
+1.
+ Write up model model (3) using matrix notation.
+ Show the expression of the OLS estimator,
+ 
+\begin_inset Formula $\boldsymbol{\hat{\beta}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We will estimate the regression model using OLS.
+\begin_inset Newline newline
+\end_inset
+
+We start by expressing the model in matrix form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{pmatrix}y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}
+\end{pmatrix}=\begin{pmatrix}x_{11} & x_{12}\\
+x_{21} & x_{22}\\
+\vdots & \vdots\\
+x_{n1} & x_{n2}
+\end{pmatrix}\begin{pmatrix}\beta_{1}\\
+\beta_{2}
+\end{pmatrix}+\begin{pmatrix}u_{1}\\
+u_{2}\\
+\vdots\\
+u_{n}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Or
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+y=X\beta+u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Here:
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $y$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ vector of the dependent variable,
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $X$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times2$
+\end_inset
+
+ matrix of independent variables,
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is a 
+\begin_inset Formula $2\times1$
+\end_inset
+
+ vector of coefficients,
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $u$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ vector of error terms.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The OLS estimator for the coefficients 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}=\begin{bmatrix}\hat{\beta_{1}}\\
+\hat{\beta_{2}}
+\end{bmatrix}=(X'X)^{-1}X'y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Now we can calculate the estimates of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+ First I will start by calculationg 
+\begin_inset Formula $X'X$
+\end_inset
+
+,
+ the product of the transpose of 
+\begin_inset Formula $X$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $X$
+\end_inset
+
+ itself:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X'X=\begin{pmatrix}x_{11} & x_{21} & \dots & x_{n1}\\
+x_{12} & x_{22} & \dots & x_{n2}
+\end{pmatrix}\begin{pmatrix}x_{11} & x_{12}\\
+x_{21} & x_{22}\\
+\vdots & \vdots\\
+x_{n1} & x_{n2}
+\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{n}x_{i1}^{2} & \sum_{i=1}^{n}x_{i1}x_{i2}\\
+\sum_{i=1}^{n}x_{i1}x_{i2} & \sum_{i=1}^{n}x_{i2}^{2}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Now we will find the inverse of 
+\begin_inset Formula $X'X$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+To invert a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix with the form 
+\begin_inset Formula $\begin{pmatrix}a & b\\
+c & d
+\end{pmatrix}$
+\end_inset
+
+ we use:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{pmatrix}a & b\\
+c & d
+\end{pmatrix}^{-1}=\frac{1}{ad-bc}\begin{pmatrix}d & -b\\
+-c & a
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Here we can do that to 
+\begin_inset Formula $X'X$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(X'X)^{-1}=\frac{1}{\sum_{i=1}^{n}x_{i1}^{2}\cdot\sum_{i=1}^{n}x_{i2}^{2}-\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}\begin{pmatrix}\sum_{i=1}^{n}x_{i2}^{2} & -\sum_{i=1}^{n}x_{i1}x_{i2}\\
+-\sum_{i=1}^{n}x_{i1}x_{i2} & \sum_{i=1}^{n}x_{i1}^{2}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Next up,
+ we can compute 
+\begin_inset Formula $X'y$
+\end_inset
+
+,
+ the product of 
+\begin_inset Formula $X'$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X'y=\begin{pmatrix}x_{11} & x_{21} & \dots & x_{n1}\\
+x_{12} & x_{22} & \dots & x_{n2}
+\end{pmatrix}\begin{pmatrix}y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}
+\end{pmatrix}=\begin{pmatrix}\sum_{i=1}^{n}x_{i1}y_{i}\\
+\sum_{i=1}^{n}x_{i2}y_{i}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+To estimate 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+,
+ we know from the hint,
+ that we only need the first row of the matrix product 
+\begin_inset Formula $(X'X)^{-1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\sum_{i=1}^{n}x_{i1}^{2}\cdot\sum_{i=1}^{n}x_{i2}^{2}-\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}\begin{pmatrix}\sum_{i=1}^{n}x_{i2}^{2} & -\sum_{i=1}^{n}x_{i1}x_{i2}\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Now we can multiply this by 
+\begin_inset Formula $X'y$
+\end_inset
+
+,
+ and hereby get the estimator for 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}_{1}=\frac{1}{\sum_{i=1}^{n}x_{i1}^{2}\cdot\sum_{i=1}^{n}x_{i2}^{2}-\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)^{2}}\left(\sum_{i=1}^{n}x_{i2}^{2}\sum_{i=1}^{n}x_{i1}y_{i}-\sum_{i=1}^{n}x_{i1}x_{i2}\sum_{i=1}^{n}x_{i2}y_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+This can be simplified to:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}_{1}=\frac{\sum_{i=1}^{n}x_{i1}y_{i}-\frac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i1}^{2}-\left(\frac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\right)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Which equals:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}_{1}=\frac{\sum_{i=1}^{n}x_{i1}y_{i}-\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)\frac{\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i2}^{2}}}{\sum_{i=1}^{n}x_{i1}^{2}-\left(\frac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\right)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Hereby we have shown that the OLS estimator,
+ 
+\begin_inset Formula $\hat{\beta_{1}}$
+\end_inset
+
+ can be written as 
+\begin_inset Formula $\frac{\sum_{i=1}^{n}x_{i1}y_{i}-\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)\frac{\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i2}^{2}}}{\sum_{i=1}^{n}x_{i1}^{2}-\left(\frac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\right)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+2.
+ Now consider two simple regressions:
+\end_layout
+
+\begin_layout Standard
+Equation 2.66:
+\begin_inset Formula $\tilde{\beta\frac{\sum_{i=1}^{n}x_{i}y_{i}}{\sum_{i=1}^{n}x_{i}^{2}}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+To show that the estimated slope parameter from step b) is identical to 
+\begin_inset Formula $\hat{\beta}_{1}$
+\end_inset
+
+ as defined in the previous equation,
+ we will use the provided hint and apply equation (2.66) from Wooldridge.
+\end_layout
+
+\begin_layout Standard
+Step a) Regress 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ without an intercept:
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Part (a):
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+The OLS estimate of 
+\begin_inset Formula $\hat{\beta_{1}}$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta_{1}}=\frac{\sum_{i=1}^{n}x_{2i}x_{1i}}{\sum_{i=1}^{n}x_{2i}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color white
+a
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Also we can express 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ from 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{1}=\beta_{1}x_{2}+u
+\]
+
+\end_inset
+
+Here the residual 
+\begin_inset Formula $u$
+\end_inset
+
+ for the model is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u=x_{1}-\hat{\beta_{1}}x_{2}
+\]
+
+\end_inset
+
+Which also can be written as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u=\hat{r_{1}}=x_{1}-\frac{\sum_{i=1}^{n}x_{2i}x_{1i}}{\sum_{i=1}^{n}x_{2i}^{2}}x_{2}
+\]
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+Part (b):
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+For the second regression model:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=\beta_{1}\cdot\hat{r_{1}}+u_{2}
+\]
+
+\end_inset
+
+The OLS estimate of 
+\begin_inset Formula $\hat{\beta_{1}}$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta_{1}}=\frac{\sum_{j=1}^{n}\hat{r_{1}}y_{j}}{\sum_{j=1}^{n}\hat{r_{1}}^{2}}
+\]
+
+\end_inset
+
+Here we can substitute 
+\begin_inset Formula $\hat{r_{1}}$
+\end_inset
+
+ from part 
+\begin_inset Formula $(a)$
+\end_inset
+
+,
+ and then start to simplify the numerator,
+ we get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta_{1}}=\frac{\sum_{j=1}^{n}\left(x_{j1}-\frac{\sum_{i=1}^{n}x_{2i}x_{1i}}{\sum_{i=1}^{n}x_{2i}^{2}}\cdot x_{j2}\right)y_{j}}{\sum_{j=1}^{n}\left(x_{j1}-\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}x_{j2}\right)^{2}}=\frac{\left(\sum_{j=1}^{n}x_{j1}-\frac{\sum_{i=1}^{n}x_{2i}x_{1i}}{\sum_{i=1}^{n}x_{2i}^{2}}\cdot\sum_{j=1}^{n}x_{j2}\right)\sum_{j=1}^{n}y_{j}}{\sum_{j=1}^{n}\left(x_{j1}-\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}x_{j2}\right)^{2}}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\sum_{j=1}^{n}x_{j1}y_{j}-\frac{\sum_{i=1}^{n}x_{2i}x_{1i}}{\sum_{i=1}^{n}x_{2i}^{2}}\cdot\sum_{j=1}^{n}x_{j2}y_{j}}{\sum_{j=1}^{n}\left(x_{j1}-\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}x_{j2}\right)^{2}}=\frac{\sum_{j=1}^{n}x_{j1}y_{j}-\frac{\sum_{i=1}^{n}x_{2i}x_{1i}}{\sum_{i=1}^{n}x_{2i}^{2}}\cdot\sum_{j=1}^{n}x_{j2}y_{j}}{\sum_{j=1}^{n}\left(x_{j1}-\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}x_{j2}\right)^{2}}
+\]
+
+\end_inset
+
+From here,
+ we can switch the 
+\begin_inset Formula $j$
+\end_inset
+
+ index to 
+\begin_inset Formula $i$
+\end_inset
+
+,
+ as the values are the same sum expressions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\sum_{i=1}^{n}x_{i1}y_{i}-\frac{\sum_{i=1}^{n}x_{2i}x_{1i}}{\sum_{i=1}^{n}x_{2i}^{2}}\cdot\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{j=1}^{n}\left(x_{j1}-\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}x_{j2}\right)^{2}}=\frac{\sum_{i=1}^{n}x_{i1}y_{i}-(\sum_{i=1}^{n}x_{2i}x_{1i})\frac{\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{2i}^{2}}}{\sum_{j=1}^{n}\left(x_{j1}-\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}x_{j2}\right)^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now we have found the numerator,
+ and from here,
+ we will now simplify the denominator:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{j=1}^{n}\hat{r_{1}}^{2}=\sum_{j=1}^{n}\left(x_{j1}-\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}x_{j2}\right)^{2}=\sum_{j=1}^{n}x_{j1}^{2}+\sum_{j=1}^{n}\left(\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}\cdot x_{j2}\right)^{2}-2\cdot\sum_{j=1}^{n}x_{j1}\cdot x_{j2}\cdot\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}
+\]
+
+\end_inset
+
+This simplifies to:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{j=1}^{n}x_{j1}^{2}+\sum_{j=1}^{n}\frac{(\sum_{i=1}^{n}x_{i2}x_{i1})^{2}}{(\sum_{i=1}^{n}x_{i2}^{2})^{2}}\cdot x_{j2}^{2}-2\cdot\sum_{j=1}^{n}x_{j1}\cdot x_{j2}\cdot\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now we factor out the second and third terms:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{j=1}^{n}x_{j1}^{2}+\frac{(\sum_{i=1}^{n}x_{i2}x_{i1})^{2}}{(\sum_{i=1}^{n}x_{i2}^{2})^{2}}\sum_{j=1}^{n}x_{j2}^{2}-2\cdot\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}\cdot\sum_{j=1}^{n}x_{j1}\cdot x_{j2}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now we can switch the 
+\begin_inset Formula $j$
+\end_inset
+
+ index to 
+\begin_inset Formula $i$
+\end_inset
+
+,
+ as the values are the same sum expressions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{i=1}^{n}x_{i1}^{2}+\frac{(\sum_{i=1}^{n}x_{i2}x_{i1})^{2}}{(\sum_{i=1}^{n}x_{i2}^{2})^{2}}\sum_{i=1}^{n}x_{i2}^{2}-2\cdot\frac{\sum_{i=1}^{n}x_{i2}x_{i1}}{\sum_{i=1}^{n}x_{i2}^{2}}\cdot\sum_{i=1}^{n}x_{i1}\cdot x_{i2}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Here we can now combine the second and third terms:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{i=1}^{n}x_{i1}^{2}+\frac{(\sum_{i=1}^{n}x_{i2}x_{i1})^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}-2\cdot\frac{(\sum_{i=1}^{n}x_{i2}x_{i1})^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+And now we have the denominator:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{i=1}^{n}x_{i1}^{2}-\frac{(\sum_{i=1}^{n}x_{i2}x_{i1})^{2}}{\sum_{i=1}^{n}x_{i2}^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now we can show the final expression:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\sum_{i=1}^{n}x_{i1}y_{i}-\left(\sum_{i=1}^{n}x_{i1}x_{i2}\right)\frac{\sum_{i=1}^{n}x_{i2}y_{i}}{\sum_{i=1}^{n}x_{i2}^{2}}}{\sum_{i=1}^{n}x_{i1}^{2}-\left(\frac{\sum_{i=1}^{n}x_{i1}x_{i2}}{\sum_{i=1}^{n}x_{i2}^{2}}\right)^{2}}.
+\]
+
+\end_inset
+
+Hereby we have showed that the estimated slope parameter from step b) is identical to 
+\begin_inset Formula $\hat{β_{1}}$
+\end_inset
+
+ as defined in equation (4) and found that the two expressions are equal to each other.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+3.
+ Verify your theoretical result from Problem 3.2
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lclc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Dep.
+ Variable:}    &     taxrate      & 
+\backslash
+textbf{  R-squared:
+         } &     0.039   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Model:}            &       OLS        & 
+\backslash
+textbf{  Adj.
+ R-squared:
+    } &     0.029   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Method:}           &  Least Squares   & 
+\backslash
+textbf{  F-statistic:
+       } &     3.862   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Date:}             & Wed,
+ 18 Sep 2024 & 
+\backslash
+textbf{  Prob (F-statistic):} &   0.0523    
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Time:}             &     11:54:00     & 
+\backslash
+textbf{  Log-Likelihood:
+    } &   -127.16   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{No.
+ Observations:} &          98      & 
+\backslash
+textbf{  AIC:
+               } &     258.3   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Df Residuals:}     &          96      & 
+\backslash
+textbf{  BIC:
+               } &     263.5   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Df Model:}         &           1      & 
+\backslash
+textbf{                     } &             
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Covariance Type:}  &    nonrobust     & 
+\backslash
+textbf{                     } &             
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lcccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+                  & 
+\backslash
+textbf{coef} & 
+\backslash
+textbf{std err} & 
+\backslash
+textbf{t} & 
+\backslash
+textbf{P$> |$t$|$} & 
+\backslash
+textbf{[0.025} & 
+\backslash
+textbf{0.975]}  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{const}    &      27.6268  &        1.234     &    22.386  &         0.000        &       25.177    &       30.077     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{log
+\backslash
+_pop} &      -0.2273  &        0.116     &    -1.965  &         0.052        &       -0.457    &        0.002     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lclc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Omnibus:}       &  3.367 & 
+\backslash
+textbf{  Durbin-Watson:
+     } &    1.570  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Prob(Omnibus):} &  0.186 & 
+\backslash
+textbf{  Jarque-Bera (JB):
+  } &    2.699  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Skew:}          & -0.328 & 
+\backslash
+textbf{  Prob(JB):
+          } &    0.259  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Kurtosis:}      &  3.480 & 
+\backslash
+textbf{  Cond.
+ No.
+          } &     147.
+  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{OLS Regression Results}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the table we get the following:
+\end_layout
+
+\begin_layout Standard
+R-squared:
+ 0.039,
+ indicating that the log of population explains about 3.9% of the variation in the tax rate.
+ 
+\end_layout
+
+\begin_layout Standard
+Coefficient for 
+\begin_inset Formula $\log(\text{pop})$
+\end_inset
+
+:
+ 
+\begin_inset Formula $-0.2273$
+\end_inset
+
+,
+ with a p-value of 
+\begin_inset Formula $0.052$
+\end_inset
+
+,
+ which is close to the 
+\begin_inset Formula $0.05$
+\end_inset
+
+ significance level.
+ This suggests a weak negative relationship between the population size (in logarithmic terms) and the tax rate.
+ 
+\end_layout
+
+\begin_layout Standard
+Intercept (constant):
+ 
+\begin_inset Formula $27.63$
+\end_inset
+
+,
+ meaning that when 
+\begin_inset Formula $\log(\text{pop})$
+\end_inset
+
+ is zero,
+ the expected tax rate is around 
+\begin_inset Formula $27.63$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Next,
+ run a simple regression of 
+\begin_inset Formula $log(taxrevm)$
+\end_inset
+
+ on 
+\begin_inset Formula $res1_{m}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lclc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Dep.
+ Variable:}    &   log
+\backslash
+_taxrev    & 
+\backslash
+textbf{  R-squared (uncentered):}      &     0.000   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Model:}            &       OLS        & 
+\backslash
+textbf{  Adj.
+ R-squared (uncentered):} &    -0.010   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Method:}           &  Least Squares   & 
+\backslash
+textbf{  F-statistic:
+       }          & 0.0005828   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Date:}             & Wed,
+ 18 Sep 2024 & 
+\backslash
+textbf{  Prob (F-statistic):}          &    0.981    
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Time:}             &     11:54:45     & 
+\backslash
+textbf{  Log-Likelihood:
+    }          &   -344.53   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{No.
+ Observations:} &          98      & 
+\backslash
+textbf{  AIC:
+               }          &     691.1   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Df Residuals:}     &          97      & 
+\backslash
+textbf{  BIC:
+               }          &     693.6   
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Df Model:}         &           1      & 
+\backslash
+textbf{                     }          &             
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Covariance Type:}  &    nonrobust     & 
+\backslash
+textbf{                     }          &             
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lcccccc}
+\end_layout
+
+\begin_layout Plain Layout
+
+              & 
+\backslash
+textbf{coef} & 
+\backslash
+textbf{std err} & 
+\backslash
+textbf{t} & 
+\backslash
+textbf{P$> |$t$|$} & 
+\backslash
+textbf{[0.025} & 
+\backslash
+textbf{0.975]}  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{res1} &       0.0226  &        0.933     &     0.024  &         0.981        &       -1.829    &        1.874     
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lclc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Omnibus:}       & 15.581 & 
+\backslash
+textbf{  Durbin-Watson:
+     } &    0.015  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Prob(Omnibus):} &  0.000 & 
+\backslash
+textbf{  Jarque-Bera (JB):
+  } &   46.400  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Skew:}          & -0.383 & 
+\backslash
+textbf{  Prob(JB):
+          } & 8.40e-11  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Kurtosis:}      &  6.283 & 
+\backslash
+textbf{  Cond.
+ No.
+          } &     1.00  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{OLS Regression Results}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+R-squared (uncentered):
+ 0.000,
+ indicating that the residuals 
+\begin_inset Formula $(\text{res1})$
+\end_inset
+
+ explain virtually none of the variation in 
+\begin_inset Formula $\log(\text{taxrev})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Coefficient for 
+\begin_inset Formula $\text{res1}:0.0226$
+\end_inset
+
+,
+ with a very high p-value of 
+\begin_inset Formula $0.981$
+\end_inset
+
+.
+ This suggests that the relationship between the residuals from the first regression and 
+\begin_inset Formula $\log(\text{taxrev})$
+\end_inset
+
+ is statistically insignificant.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+F-statistic:
+ 
+\begin_inset Formula $0.0005879$
+\end_inset
+
+,
+ reinforcing that the model does not significantly explain the variation in the dependent variable.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Discuss why it is possible to obtain an estimate identical to 
+\begin_inset Formula $\boldsymbol{\beta_{1}}$
+\end_inset
+
+ in the second step when 
+\begin_inset Formula $\boldsymbol{log(pop_{m})}$
+\end_inset
+
+ is an omitted variable.
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+In the two-step procedure,
+ we first regress 
+\begin_inset Formula $\text{taxrate}$
+\end_inset
+
+ on 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ ,
+ and the residuals 
+\begin_inset Formula $\text{res1}$
+\end_inset
+
+ represent the variation in 
+\begin_inset Formula $\text{taxrate}$
+\end_inset
+
+ that is uncorrelated with 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ .
+ Essentially,
+ 
+\backslash
+
+\begin_inset Formula $text{res1}$
+\end_inset
+
+ is the “purified” variation in 
+\begin_inset Formula $\text{taxrate}$
+\end_inset
+
+ ,
+ free from any influence of 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+When we regress 
+\begin_inset Formula $\log(\text{taxrev})$
+\end_inset
+
+ on 
+\begin_inset Formula $\text{res1}$
+\end_inset
+
+ ,
+ the regression no longer suffers from omitted variable bias because 
+\begin_inset Formula $\text{res1}$
+\end_inset
+
+ is orthogonal (uncorrelated) to 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+The residuals 
+\begin_inset Formula $\text{res1}$
+\end_inset
+
+ contain no information about 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ ,
+ meaning any variation in 
+\begin_inset Formula $\log(\text{taxrev})$
+\end_inset
+
+ explained by 
+\begin_inset Formula $\text{res1}$
+\end_inset
+
+ is independent of the variation in 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Thus,
+ the second step does not suffer from omitted variable bias,
+ and this explains why the estimate from this regression can be identical to 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ .
+ The first step “separates out” the influence of 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ on 
+\begin_inset Formula $\text{taxrate}$
+\end_inset
+
+ ,
+ and the second step works with the residual variation in 
+\begin_inset Formula $\text{taxrate}$
+\end_inset
+
+ ,
+ which is uncorrelated with the omitted variable.
+\end_layout
+
+\begin_layout Standard
+When you omit 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ in the second step,
+ you’re effectively isolating the variation in 
+\begin_inset Formula $\text{taxrate}$
+\end_inset
+
+ that is independent of 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ (which is captured by 
+\begin_inset Formula $\text{res1}$
+\end_inset
+
+ ).
+ This is similar to what happens in a multiple regression where you would control for 
+\begin_inset Formula $\log(\text{popm})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 4:
+ Conclusion
+\end_layout
+
+\end_body
+\end_document
